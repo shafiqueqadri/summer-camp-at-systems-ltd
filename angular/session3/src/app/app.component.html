@@ -1,0 +1,9 @@
+<!-- <router-outlet></router-outlet> -->
+
+<input type="text" [(ngModel)]="todo">
+<button (click)="addTodo()">Click</button>
+<ul>
+  <li *ngFor="let todo of todos; let i = index">
+    <app-todo-element [todo]="todo" (removeTodo)="removeTodo($event)"></app-todo-element>
+  </li>
+</ul>
